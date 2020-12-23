@@ -58,12 +58,16 @@ public class MainRun
         traversalDFS.preorder(node);
 
         /** Diameter of a Binary Tree */
-
         Integer[] tree = new Integer[]{15,1,6,0,3,null, 8,null,null,2,4,null, null, 7, null, null};
         TreeBuilder treeBuilder3 = new TreeBuilder(tree);
         treeBuilder3.root = treeBuilder3.BuildTree(treeBuilder3.root, 0);
         DiameterofBinaryTree db = new DiameterofBinaryTree(treeBuilder3.root);
         System.out.println(db.diameterOfBinaryTree());
+
+        /**Subtree of Another Tree */
+        Integer[] tree_s = new Integer[]{3,4,5,1,2};
+        Integer[] tree_t = new Integer[]{4,1,2};
+
 
 
 
