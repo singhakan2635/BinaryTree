@@ -1,7 +1,10 @@
 package com.practise.Tree.LeetcodeQuestions;
 
+import com.practise.Tree.TreeBuilder;
 import com.practise.Tree.TreeNode;
 import com.practise.Tree.TreeTraversalDFS;
+
+import java.util.List;
 
 public class MainRun
 {
@@ -14,7 +17,55 @@ public class MainRun
         TreeNode root = bt.createBinaryTree();
 
         TreeTraversalDFS traversalDFS = new TreeTraversalDFS();
-        traversalDFS.Inorder(root);
+        //traversalDFS.Inorder(root);
+        /** Building tree from array*/
+        /*
+        Integer[] arr = new Integer[]{15,1,6,0,3,null, 8,null,null,2,4,null, null, 7, null, null};
+        TreeBuilder treeBuilder = new TreeBuilder(arr);
+        treeBuilder.root = treeBuilder.BuildTree(treeBuilder.root,0);
+
+         */
+
+        /**Level Order Binary Tree Traversal */
+        /*
+        LevelOrderTraversal levelOrderTraversal = new LevelOrderTraversal(treeBuilder.root);
+        List<List<Integer>> res = levelOrderTraversal.LevelOrder();
+        List<List<Integer>> res2 = levelOrderTraversal.levelOrder2();
+        System.out.println("LevelOrder - "+res);
+        System.out.println("LevelOrder2 - " + res2);
+
+         */
+
+
+        /** Find All The Lonely Nodes */
+        Integer[] arr1 = new Integer[]{11,99,88,77,null,null,66,55,null,null,44,33,null,null,22};
+        TreeBuilder treeBuilder = new TreeBuilder(arr1);
+        treeBuilder.root = treeBuilder.BuildTree(treeBuilder.root,0);
+        LonelyNodes lonelyNodes = new LonelyNodes(treeBuilder.root);
+        System.out.println(lonelyNodes.getLonelyNodes());
+        /** Using BFS */
+        System.out.println(lonelyNodes.getLonelyNodesBFS());
+
+        /** Merge Two Binary Tree into one */
+        Integer[] tree1 = new Integer[]{1,3,2,5,null,null,null};
+        Integer[] tree2 = new Integer[]{2,1,3,null,4,null,7};
+        TreeBuilder treeBuilder1 = new TreeBuilder(tree1);
+        TreeBuilder treeBuilder2 = new TreeBuilder(tree2);
+        treeBuilder1.root = treeBuilder1.BuildTree(treeBuilder1.root,0);
+        treeBuilder2.root = treeBuilder2.BuildTree(treeBuilder2.root, 0);
+        MergeTwoBinaryTrees merge = new MergeTwoBinaryTrees(treeBuilder1.root,treeBuilder2.root);
+        TreeNode node = merge.MergedTreeDFS2();
+        traversalDFS.preorder(node);
+
+        /** Diameter of a Binary Tree */
+
+        Integer[] tree = new Integer[]{15,1,6,0,3,null, 8,null,null,2,4,null, null, 7, null, null};
+        TreeBuilder treeBuilder3 = new TreeBuilder(tree);
+        treeBuilder3.root = treeBuilder3.BuildTree(treeBuilder3.root, 0);
+        DiameterofBinaryTree db = new DiameterofBinaryTree(treeBuilder3.root);
+        System.out.println(db.diameterOfBinaryTree());
+
+
 
     }
 }
