@@ -1,9 +1,6 @@
-package com.practise.Tree.LeetcodeQuestions;
+package com.practise.Tree.LeetcodeQuestionsEasy;
 
 import com.practise.Tree.TreeNode;
-
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class MergeTwoBinaryTrees
 {

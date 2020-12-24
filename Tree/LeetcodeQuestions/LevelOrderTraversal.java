@@ -1,7 +1,6 @@
-package com.practise.Tree.LeetcodeQuestions;
+package com.practise.Tree.LeetcodeQuestionsEasy;
 
 import com.practise.Tree.TreeNode;
-import com.sun.source.tree.Tree;
 
 import java.util.*;
 

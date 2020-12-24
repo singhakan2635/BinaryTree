@@ -1,4 +1,4 @@
-package com.practise.Tree.LeetcodeQuestions;
+package com.practise.Tree.LeetcodeQuestionsEasy;
 
 import com.practise.Tree.TreeNode;
 
