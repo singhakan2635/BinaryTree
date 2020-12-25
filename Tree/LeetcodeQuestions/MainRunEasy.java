@@ -92,6 +92,10 @@ public class MainRunEasy
         System.out.println(maxDep.maxDepth(treeBuilder5.root));
         System.out.println(maxDep.maxDepth(treeBuilder3.root));
 
+        /** Second smallest element in the binary tree */
+        SecondMinimumNodesOfBinaryTree seconf = new SecondMinimumNodesOfBinaryTree();
+        System.out.println(seconf.findSecondMinimumValue(treeBuilder3.root));
+
 
 
     }
