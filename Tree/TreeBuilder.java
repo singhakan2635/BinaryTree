@@ -1,8 +1,8 @@
-package com.practise.Tree;
+package Tree;
 
 public class TreeBuilder
 {
-    TreeNode root;
+    public TreeNode root;
     private Integer[] a;
     public TreeBuilder(Integer[] tree)
     {

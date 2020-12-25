@@ -1,6 +1,6 @@
-package com.practise.Tree.LeetcodeQuestionsEasy;
+package Tree.LeetcodeQuestions;
 
-import com.practise.Tree.TreeNode;
+import Tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -61,5 +61,35 @@ public class CousinsInBinaryTree
             this.depth = depth;
             this.parent = parent;
         }
+    }
+
+    public boolean isCousins2(TreeNode root,int x,int y)
+    {
+        Var[] vars =new Var[2];
+        helper(root,1,x,y,vars,0);
+        if (vars[0].depth!=vars[1].depth)
+            return false;
+        if (vars[0].parent==vars[1].parent)
+            return false;
+        return true;
+
+    }
+    private void helper(TreeNode node,int depth,int x,int y,Var[] vars,int count)
+    {
+        if (node==null)
+            return;
+        if (node.left!=null && (node.left.val==x || node.left.val==y))
+        {
+            vars[count++] = new Var(node.left,depth,node);
+        }
+        if (node.right!=null && (node.right.val==x || node.right.val==y))
+        {
+            vars[count++] = new Var(node.left,depth,node);
+
+        }
+        if (node.left!=null)
+            helper(node.left,depth+1,x,y,vars,count);
+        if (node.right!=null)
+            helper(node.right,depth+1,x,y,vars,count);
     }
 }

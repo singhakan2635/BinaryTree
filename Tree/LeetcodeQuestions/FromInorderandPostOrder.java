@@ -1,6 +1,6 @@
-package com.practise.Tree.LeetcodeQuestionsEasy;
+package Tree.LeetcodeQuestions;
 
-import com.practise.Tree.TreeNode;
+import Tree.TreeNode;
 
 import java.util.HashMap;
 

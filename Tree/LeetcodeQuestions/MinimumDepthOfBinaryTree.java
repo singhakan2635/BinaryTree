@@ -1,6 +1,6 @@
-package com.practise.Tree.LeetcodeQuestionsEasy;
+package Tree.LeetcodeQuestions;
 
-import com.practise.Tree.TreeNode;
+import Tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -57,5 +57,24 @@ public class MinimumDepthOfBinaryTree
             this.node = node;
             this.depth = depth;
         }
+    }
+    int min=Integer.MAX_VALUE;
+    public int minDpethPu(TreeNode root)
+    {
+        helper(root,1);
+        return min;
+    }
+    private void helper(TreeNode node,int height)
+    {
+        if (node==null) return;
+        if (node.left==null && node.right==null)
+        {
+            min = Math.min(height,min);
+            return;
+        }
+        if (node.left!=null)
+            helper(node.left,height+1);
+        if (node.right!=null)
+            helper(node.right,height+1);
     }
 }

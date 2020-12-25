@@ -1,8 +1,8 @@
-package com.practise.Tree.LeetcodeQuestionsEasy;
+package Tree.LeetcodeQuestions;
 
-import com.practise.Tree.TreeBuilder;
-import com.practise.Tree.TreeNode;
-import com.practise.Tree.TreeTraversalDFS;
+import Tree.TreeBuilder;
+import Tree.TreeNode;
+import Tree.TreeTraversalDFS;
 
 public class MainRunEasy
 {
