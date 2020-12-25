@@ -63,8 +63,10 @@ public class MainRunEasy
         System.out.println(db.diameterOfBinaryTree());
 
         /**Subtree of Another Tree */
-        Integer[] tree_s = new Integer[]{3,4,5,1,2};
-        Integer[] tree_t = new Integer[]{4,1,2};
+        Integer[] tree_s = new Integer[]{1,0,1,0,1,0,1};
+        Integer[] tree_t = new Integer[]{2,null,3,null,4,null,5,null,6};
+        TreeBuilder build1 = new TreeBuilder(tree_t);
+        build1.root =build1.BuildTree(build1.root, 0);
 
         /**Level Order traversal 2 */
         Integer[] treex = new Integer[]{3,9,20,null,null,15,7};
@@ -81,7 +83,7 @@ public class MainRunEasy
         System.out.println(sum.hasPathSum(treeBuilder5.root,22));
         System.out.println(sum.pathSumBFS(treeBuilder5.root,22));
 
-        /**BinaryTree Paths using Recursion and BFS */
+        /*BinaryTree Paths using Recursion and BFS */
         BinaryTreePaths binaryTreePaths = new BinaryTreePaths();
         System.out.println(binaryTreePaths.binaryTreePaths(treeBuilder5.root));
 
@@ -92,9 +94,29 @@ public class MainRunEasy
         System.out.println(maxDep.maxDepth(treeBuilder5.root));
         System.out.println(maxDep.maxDepth(treeBuilder3.root));
 
+        /**Sum of Left Leaves */
+        SumOfLeftLeaves sum1 = new SumOfLeftLeaves();
+        System.out.println(sum1.sumOfLeftLeaves(treeBuilder3.root));
+
+        /** Sum of Root to Leaf in Binary */
+        TreeBuilder treeBuilder6 = new TreeBuilder(tree_s);
+        treeBuilder6.root = treeBuilder6.BuildTree(treeBuilder6.root, 0);
+        sumofLeadtoRootBinary sumofLeadtoRootBinary =new sumofLeadtoRootBinary();
+        System.out.println(sumofLeadtoRootBinary.sumRootToLeaf(treeBuilder6.root));
+
+
+        /** Minimum Depth of Binary Tree */
+        MinimumDepthOfBinaryTree minimumDepthOfBinaryTree = new MinimumDepthOfBinaryTree();
+        System.out.println(minimumDepthOfBinaryTree.minDepthBFS(build1.root));
+
+        /**Averages of Levels in Binary Trees */
+        AveragesOfLevelInBinaryTrees averages = new AveragesOfLevelInBinaryTrees();
+        System.out.println(averages.averageOfLevels(treeBuilder3.root));
+
         /** Second smallest element in the binary tree */
         SecondMinimumNodesOfBinaryTree seconf = new SecondMinimumNodesOfBinaryTree();
         System.out.println(seconf.findSecondMinimumValue(treeBuilder3.root));
+
 
 
 
