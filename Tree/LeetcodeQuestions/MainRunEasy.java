@@ -117,7 +117,15 @@ public class MainRunEasy
         SecondMinimumNodesOfBinaryTree seconf = new SecondMinimumNodesOfBinaryTree();
         System.out.println(seconf.findSecondMinimumValue(treeBuilder3.root));
 
-
+        /** Leaf Similar Tree */
+        LeafSimilarTree similarTree = new LeafSimilarTree();
+        Integer[] root1 = new Integer[]{3,5,1,6,2,9,8,null,null,7,14};
+        Integer[] root2 = new Integer[]{3,5,1,6,71,4,2,null,null,null,null,null,null,9,8};
+        TreeBuilder build2 = new TreeBuilder(root1);
+        TreeBuilder build3 = new TreeBuilder(root2);
+        build2.root = build2.BuildTree(build2.root, 0);
+        build3.root = build3.BuildTree(build3.root, 0);
+        System.out.println(similarTree.leafSimilar(build2.root, build3.root));
 
 
     }
