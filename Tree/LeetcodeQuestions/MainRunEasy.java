@@ -1,5 +1,6 @@
 package Tree.LeetcodeQuestions;
 
+import Tree.LeetcodeQuestionsMedium.BinaryTreeRightSideView;
 import Tree.TreeBuilder;
 import Tree.TreeNode;
 import Tree.TreeTraversalDFS;
@@ -126,7 +127,6 @@ public class MainRunEasy
         build2.root = build2.BuildTree(build2.root, 0);
         build3.root = build3.BuildTree(build3.root, 0);
         System.out.println(similarTree.leafSimilar(build2.root, build3.root));
-
 
     }
 }
