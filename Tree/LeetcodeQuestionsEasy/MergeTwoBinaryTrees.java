@@ -1,6 +1,5 @@
-package Tree.LeetcodeQuestions;
+package Tree.LeetcodeQuestionsEasy;
 
-import Tree.TreeNode;
 import Tree.TreeNode;
 
 public class MergeTwoBinaryTrees

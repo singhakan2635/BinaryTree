@@ -1,9 +1,6 @@
-package Tree.LeetcodeQuestions;
+package Tree.LeetcodeQuestionsEasy;
 
 import Tree.TreeNode;
-
-import java.util.Comparator;
-import java.util.PriorityQueue;
 
 public class SecondMinimumNodesOfBinaryTree
 {

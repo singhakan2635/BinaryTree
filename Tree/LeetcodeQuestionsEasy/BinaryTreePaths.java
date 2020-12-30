@@ -1,4 +1,4 @@
-package Tree.LeetcodeQuestions;
+package Tree.LeetcodeQuestionsEasy;
 
 import Tree.TreeNode;
 

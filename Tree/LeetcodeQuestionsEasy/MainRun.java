@@ -1,10 +1,8 @@
-package Tree.LeetcodeQuestions;
+package Tree.LeetcodeQuestionsEasy;
 
 import Tree.TreeBuilder;
 import Tree.TreeNode;
 import Tree.TreeTraversalDFS;
-
-import java.util.List;
 
 public class MainRun
 {

@@ -1,11 +1,9 @@
-package Tree.LeetcodeQuestions;
+package Tree.LeetcodeQuestionsEasy;
 
 import Tree.TreeNode;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 public class LeafSimilarTree
 {

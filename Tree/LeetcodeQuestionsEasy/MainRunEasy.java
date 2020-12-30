@@ -1,6 +1,5 @@
-package Tree.LeetcodeQuestions;
+package Tree.LeetcodeQuestionsEasy;
 
-import Tree.LeetcodeQuestionsMedium.BinaryTreeRightSideView;
 import Tree.TreeBuilder;
 import Tree.TreeNode;
 import Tree.TreeTraversalDFS;

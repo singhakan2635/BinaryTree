@@ -44,5 +44,15 @@ public class MainClassMedium
         ZigZagLevel zigZagLevel = new ZigZagLevel();
         System.out.println(zigZagLevel.zigzagLevelOrder(builder2.root));
         System.out.println(zigZagLevel.zigzagLevelOrderDFS(builder2.root));
+
+        /** 545. Boundary of Binary Tree */
+        Integer[] tree4 = new Integer[]{1,2,3,4,5,6,null,null,null,7,8,9,10};
+        TreeBuilder builder3 = new TreeBuilder(tree4);
+        builder3.root = builder3.BuildTree(builder3.root, 0);
+        BoundaryOfBinaryTrees boundary = new BoundaryOfBinaryTrees();
+        System.out.println(boundary.boundaryOfBinaryTree(builder3.root));
+
+        BoundaryOfBinaryTrees2 boundary1 = new BoundaryOfBinaryTrees2();
+        System.out.println(boundary1.boundaryOfBinaryTree(builder3.root));
     }
 }
