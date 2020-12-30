@@ -22,6 +22,14 @@ public class MainClassMedium
         TreeNode p = new TreeNode(5);
         TreeNode q = new TreeNode(4);
 
+        /** 863. All Nodes Distance K in Binary Tree */
+        Integer[] tree = new Integer[]{3,5,1,6,2,0,8,null,null,7,4};
+        TreeBuilder build1 = new TreeBuilder(tree);
+        build1.root = build1.BuildTree(build1.root, 0);
+        TreeNode target = new TreeNode(5);
+        AllNodesDistanceKinBinaryTree distanceKinBinaryTree = new AllNodesDistanceKinBinaryTree();
+        System.out.println(distanceKinBinaryTree.distanceK(build1.root, target,2));
+
 
     }
 }
