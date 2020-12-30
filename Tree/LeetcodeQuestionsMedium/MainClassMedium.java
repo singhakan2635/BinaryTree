@@ -37,6 +37,12 @@ public class MainClassMedium
         VerticalOrderTraversal traversal = new VerticalOrderTraversal();
         System.out.println(traversal.verticalTraversal(builder1.root));
 
-
+        /** 103. Binary Tree Zigzag Level Order Traversal */
+        Integer[] tree3 = new Integer[]{3,9,20,null,null,15,7};
+        TreeBuilder builder2 = new TreeBuilder(tree3);
+        builder2.root = builder2.BuildTree(builder2.root, 0);
+        ZigZagLevel zigZagLevel = new ZigZagLevel();
+        System.out.println(zigZagLevel.zigzagLevelOrder(builder2.root));
+        System.out.println(zigZagLevel.zigzagLevelOrderDFS(builder2.root));
     }
 }
