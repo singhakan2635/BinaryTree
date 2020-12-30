@@ -30,6 +30,13 @@ public class MainClassMedium
         AllNodesDistanceKinBinaryTree distanceKinBinaryTree = new AllNodesDistanceKinBinaryTree();
         System.out.println(distanceKinBinaryTree.distanceK(build1.root, target,2));
 
+        /** 987. Vertical Order Traversal of a Binary Tree */
+        Integer[] tree2 = new Integer[]{0,2,1,3,null,null,null,4,5,null,7,6,null,10,8,11,9};
+        TreeBuilder builder1 = new TreeBuilder(tree2);
+        builder1.root = builder1.BuildTree(builder1.root, 0);
+        VerticalOrderTraversal traversal = new VerticalOrderTraversal();
+        System.out.println(traversal.verticalTraversal(builder1.root));
+
 
     }
 }
