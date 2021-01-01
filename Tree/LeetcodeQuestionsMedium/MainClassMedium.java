@@ -62,5 +62,22 @@ public class MainClassMedium
         PathSumIII pathSumIII = new PathSumIII();
         System.out.println(pathSumIII.pathSum(builder4.root,8));
         System.out.println(pathSumIII.pathSum2(builder4.root,8));
+
+        /**979. Distribute Coins in Binary Tree */
+        Integer[] tree6 = new Integer[]{1,0,0,null,3};
+        TreeBuilder treeBuilder = new TreeBuilder(tree6);
+        treeBuilder.root = treeBuilder.BuildTree(treeBuilder.root, 0);
+        DistributeTheCoinsInBinaryTree coins = new DistributeTheCoinsInBinaryTree();
+        System.out.println("Coins Distribution");
+        System.out.println(coins.distributeCoins(treeBuilder.root));
+
+
+        Integer[] tree7 = new Integer[]{1,2,3,4,5,6,7};
+        TreeBuilder2 builder = new TreeBuilder2(tree7);
+        builder.root = builder.BuildTree(builder.root,0);
+        PopulatingNextRightPointersinEachNode pointersinEachNode = new PopulatingNextRightPointersinEachNode();
+        Node root = pointersinEachNode.connect(builder.root);
+        builder.preorder(root);
+
     }
 }
