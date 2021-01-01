@@ -54,5 +54,13 @@ public class MainClassMedium
 
         BoundaryOfBinaryTrees2 boundary1 = new BoundaryOfBinaryTrees2();
         System.out.println(boundary1.boundaryOfBinaryTree(builder3.root));
+
+        /**437. Path Sum III */
+        Integer[] tree5 = new Integer[]{10,5,-3,3,2,null,11,3,-2,null,1};
+        TreeBuilder builder4 = new TreeBuilder(tree5);
+        builder4.root = builder4.BuildTree(builder4.root,0);
+        PathSumIII pathSumIII = new PathSumIII();
+        System.out.println(pathSumIII.pathSum(builder4.root,8));
+        System.out.println(pathSumIII.pathSum2(builder4.root,8));
     }
 }
