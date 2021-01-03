@@ -88,6 +88,13 @@ public class MainClassMedium
         PathSum2 pathSum2 =new PathSum2();
         System.out.println(pathSum2.pathSum2(builder5.root, 22));
 
+        /** 687. Longest Univalue Path */
+        System.out.println("Longest Univalued Path");
+        Integer[] tree9 = new Integer[]{1,4,5,4,4,5};
+        TreeBuilder treeBuilder1 = new TreeBuilder(tree9);
+        treeBuilder1.root = treeBuilder1.BuildTree(treeBuilder1.root, 0);
+        LongestUnivaluedPath univaluedPath = new LongestUnivaluedPath();
+        System.out.println(univaluedPath.longestUnivaluePath(treeBuilder1.root));
 
 
     }

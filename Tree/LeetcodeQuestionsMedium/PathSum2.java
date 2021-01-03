@@ -76,19 +76,19 @@ public class PathSum2
 
         if (sum==0 && node.left==null && node.right==null)
         {
-            res.add(templist);
+            res.add(new ArrayList<>(templist));
         }
         if (node.left!=null)
         {
             templist.add(node.left.val);
-            System.out.println("Templist in left "+templist);
+            //System.out.println("Templist in left "+templist);
             helper(node.left,templist,sum-node.left.val);
             templist.remove(templist.size()-1);
         }
         if (node.right!=null)
         {
             templist.add(node.right.val);
-            System.out.println("Templist in Right "+templist);
+            //System.out.println("Templist in Right "+templist);
             helper(node.right,templist,sum-node.right.val);
             templist.remove(templist.size()-1);
         }
