@@ -79,5 +79,16 @@ public class MainClassMedium
         Node root = pointersinEachNode.connect(builder.root);
         builder.preorder(root);
 
+        /** Path Sum 2 */
+        System.out.println();
+        System.out.println("PathSum2 ");
+        Integer[] tree8 = new Integer[]{5,4,8,11,null,13,4,7,2,null,null,5,1};
+        TreeBuilder builder5 =new TreeBuilder(tree8);
+        builder5.root = builder5.BuildTree(builder5.root, 0);
+        PathSum2 pathSum2 =new PathSum2();
+        System.out.println(pathSum2.pathSum2(builder5.root, 22));
+
+
+
     }
 }
