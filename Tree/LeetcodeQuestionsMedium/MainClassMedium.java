@@ -2,6 +2,7 @@ package Tree.LeetcodeQuestionsMedium;
 
 import Tree.TreeBuilder;
 import Tree.TreeNode;
+import Tree.TreeTraversalDFS;
 
 public class MainClassMedium
 {
@@ -95,6 +96,18 @@ public class MainClassMedium
         treeBuilder1.root = treeBuilder1.BuildTree(treeBuilder1.root, 0);
         LongestUnivaluedPath univaluedPath = new LongestUnivaluedPath();
         System.out.println(univaluedPath.longestUnivaluePath(treeBuilder1.root));
+
+        /** 297. Serialize and Deserialize Binary Tree */
+        System.out.println("Serialize and Deserialize Binary Tree");
+        Integer[] tree10 = new Integer[]{1,2,3,null,null,4,5};
+        TreeBuilder treeBuilder2 = new TreeBuilder(tree10);
+        treeBuilder2.root = treeBuilder2.BuildTree(treeBuilder2.root, 0);
+        SerializeAndDeserilaize s = new SerializeAndDeserilaize();
+        String data = s.serialize(treeBuilder2.root);
+        System.out.println("String is "+data);
+        TreeNode x = s.deserialize(data);
+        TreeTraversalDFS dfs = new TreeTraversalDFS();
+        dfs.preorder(x);
 
 
     }
